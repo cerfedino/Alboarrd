@@ -1,0 +1,23 @@
+links:
+  - name: Authelia
+    url: https://authelia.example.com
+    icon: https://www.authelia.com/images/branding/logo-cropped.png
+
+  - name: Immich
+    url: https://immich.example.com
+    icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/immich.png
+    groups:
+      - immich_users
+
+  - name: Nextcloud
+    url: https://nextcloud.example.com
+    icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGrVKgNoLvgpwrPp1vdgO2U0EbNMK3lQmGsA&s
+    groups:
+      - nextcloud_users
+      - nextcloud_admins
+
+  - name: Jellyfin
+    url: https://jellyfin.example.com
+    icon: https://play-lh.googleusercontent.com/FAlWhVMAjAzI6Nxc7bf4KPgjbwA3GT9j2bzeAMnRpdWim_2SXnS9i4zhwasKWIC8PV4
+    groups:
+      - jellyfin_users
