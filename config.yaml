@@ -1,0 +1,29 @@
+links:
+  - name: Authelia
+    url: https://auth.crfda.com
+    icon: https://www.authelia.com/images/branding/logo-cropped.png
+
+  - name: Immich
+    url: https://immich.crfda.com
+    icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/immich.png
+    groups:
+      - immich
+
+  - name: Nextcloud
+    url: https://filecloud.crfda.com
+    icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGrVKgNoLvgpwrPp1vdgO2U0EbNMK3lQmGsA&s
+    groups:
+      - filecloud_users
+      - filecloud_admins
+
+  - name: Jellyfin
+    url: https://jellyfin.crfda.com
+    icon: https://play-lh.googleusercontent.com/FAlWhVMAjAzI6Nxc7bf4KPgjbwA3GT9j2bzeAMnRpdWim_2SXnS9i4zhwasKWIC8PV4
+    groups:
+      - jellyfin_users
+
+  - name: PsiTransfer
+    url: https://tempup.crfda.com
+    icon: https://repocloud.io/static/apps/psitransfer/assets/logo.png
+    groups:
+      - psitransfer

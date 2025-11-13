@@ -9,6 +9,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./src:/app
+      - ./config.yaml:/etc/config.yaml:ro
     command:
       - "sh"
       - "-c"
