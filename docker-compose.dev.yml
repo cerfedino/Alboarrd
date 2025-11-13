@@ -1,0 +1,19 @@
+name: "links-dev"
+
+services:
+  links:
+    container_name: links
+    build:
+      context: ./src
+      dockerfile: Dockerfile.dev
+    restart: unless-stopped
+    volumes:
+      - ./src:/app
+      - ./config.yaml:/etc/config.yaml:ro
+    command:
+      - "sh"
+      - "-c"
+      - "pnpm install && pnpm dev"
+    working_dir: /app
+    ports:
+      - "3000"
