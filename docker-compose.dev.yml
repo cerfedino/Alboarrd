@@ -1,8 +1,8 @@
 name: "links-dev"
 
 services:
-  links:
-    container_name: links
+  links-dev:
+    container_name: links-dev
     build:
       context: ./src
       dockerfile: Dockerfile.dev
