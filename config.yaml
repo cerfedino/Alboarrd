@@ -22,6 +22,12 @@ links:
     groups:
       - jellyfin_users
 
+  - name: Jellyseerr
+    url: https://jellyseerr.crfda.com
+    icon: https://avatars.githubusercontent.com/u/178833926?s=200&v=4
+    groups:
+      - jellyfin_users
+
   - name: PsiTransfer
     url: https://tempup.crfda.com
     icon: https://repocloud.io/static/apps/psitransfer/assets/logo.png
