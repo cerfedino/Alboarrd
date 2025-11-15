@@ -1,17 +1,17 @@
 kind: pipeline
 type: docker
-name: test-pipeline
+name: pipeline
+
+trigger:
+  event:
+    - pull_request
 
 steps:
-  - name: environment
-    image: alpine:3.19
+  - name: build-react
+    image: node:20-alpine
     commands:
-      - "echo Ciao mamma"
-      - "echo Current branch: $DRONE_BRANCH"
-      - "echo Commit: $DRONE_COMMIT_SHA"
-      - env
-
-  - name: tests
-    image: alpine:3.19
-    commands:
-      - "echo Ciao mamma"
+      - cd src/
+      - npm install --global corepack@latest
+      - corepack enable pnpm
+      - pnpm install --frozen-lockfile
+      - pnpm run build
