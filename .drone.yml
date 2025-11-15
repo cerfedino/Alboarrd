@@ -1,0 +1,17 @@
+kind: pipeline
+type: docker
+name: test-pipeline
+
+steps:
+  - name: environment
+    image: alpine:3.19
+    commands:
+      - "echo Ciao mamma"
+      - "echo Current branch: $DRONE_BRANCH"
+      - "echo Commit: $DRONE_COMMIT_SHA"
+      - env
+
+  - name: tests
+    image: alpine:3.19
+    commands:
+      - "echo Ciao mamma"
