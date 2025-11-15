@@ -1,13 +1,13 @@
 kind: pipeline
 type: docker
-name: build
+name: pr-pipeline
 
 trigger:
   event:
     - pull_request
 
 steps:
-  - name: build-react
+  - name: build
     image: node:20-alpine
     commands:
       - cd src/
@@ -15,3 +15,37 @@ steps:
       - corepack enable pnpm
       - pnpm install --frozen-lockfile
       - pnpm run build
+
+---
+kind: pipeline
+type: docker
+name: release-pipeline
+
+trigger:
+  event:
+    - push
+  branch:
+    - release
+
+steps:
+  - name: fetch-tags
+    image: docker:git
+    commands:
+      - git fetch --tags
+
+  - name: build
+    image: node:20-alpine
+    commands:
+      - cd src/
+      - npm install --global corepack@latest
+      - corepack enable pnpm
+      - pnpm install --frozen-lockfile
+      - pnpm run build
+
+  - name: semantic-release
+    image: node:20-alpine
+    environment:
+      GITHUB_TOKEN:
+        from_secret: GITHUB_TOKEN
+    commands:
+      - npx semantic-release@25 --dry-run
