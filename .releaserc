@@ -1,0 +1,6 @@
+{
+    "branches": [
+        "release"
+    ],
+    "tagFormat": "${version}",
+}
