@@ -1,8 +1,8 @@
-name: "links-dev"
+name: "alboarrd-dev"
 
 services:
-  links-dev:
-    container_name: links-dev
+  alboarrd-dev:
+    container_name: alboarrd-dev
     build:
       context: ./src
       dockerfile: Dockerfile.dev

@@ -64,7 +64,7 @@ steps:
   - name: build-image
     image: plugins/docker
     settings:
-      repo: cerfe/alboarrd
+      repo: cerfedino/alboarrd
       username:
         from_secret: dockerhub_username
       password:
