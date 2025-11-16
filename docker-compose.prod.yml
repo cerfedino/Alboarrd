@@ -1,8 +1,8 @@
-name: "links-prod"
+name: "alboarrd-prod"
 
 services:
-  links:
-    container_name: links
+  alboarrd:
+    container_name: alboarrd-prod
     build:
       context: ./src
       dockerfile: Dockerfile.prod

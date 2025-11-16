@@ -22,7 +22,7 @@ export default async function Home() {
       </h1>
       <p className="text-xl w-fill text-center">Service dashboard</p>
       <div className="flex max-w-screen flex-row flex-wrap gap-6 items-center justify-center mt-14 mb-4">
-        {LINKS.links
+        {LINKS.cards
           .filter(
             (link: any) =>
               !link.groups ||
