@@ -17,3 +17,7 @@ services:
     working_dir: /app
     ports:
       - "3000"
+    environment:
+      - HEADER_USER=remote-user
+      - HEADER_NAME=remote-name
+      - HEADER_GROUPS=remote-group

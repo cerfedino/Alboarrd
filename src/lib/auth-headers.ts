@@ -8,9 +8,9 @@ export type AuthContext = {
 
 export async function getAuthContext(): Promise<AuthContext> {
   const hdrs = await headers();
-  const user = hdrs.get("remote-user");
-  const real_name = hdrs.get("remote-name");
-  const groupsHeader = hdrs.get("remote-groups");
+  const user = hdrs.get(process.env.HEADER_USER || "remote-user");
+  const real_name = hdrs.get(process.env.HEADER_NAME || "remote-name");
+  const groupsHeader = hdrs.get(process.env.HEADER_GROUPS || "remote-groups");
   const groups = groupsHeader
     ? groupsHeader.split(",").map((g) => g.trim())
     : [];
