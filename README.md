@@ -36,27 +36,26 @@ services:
 1. **Config file**\
     `config.yml` specifies the cards that can be rendered
 
-   ```yaml
-   cards:
-    - name: Authelia
+```yaml
+cards:
+  - name: Authelia
     url: https://authelia.example.com
     icon: https://www.authelia.com/images/branding/logo-cropped.png
-
-    - name: Immich
+  
+  - name: Immich
     url: https://immich.example.com
     icon: https://example.com/immich.png
     groups:
-
-    - immich_users
-
-    - name: Nextcloud
+      - immich_users
+  
+  - name: Nextcloud
     url: https://nextcloud.example.com
     icon: https://example.com/immich.png
     groups:
-    - nextcloud_users
-    - nextcloud_admins
+      - nextcloud_users
+      - nextcloud_admins
 
-   ```
+```
 
    | attribute | description                                                                                         | required |
    | --------- | --------------------------------------------------------------------------------------------------- | -------- |
@@ -77,7 +76,3 @@ services:
 
 I was looking for a dashboard application out there, but I didnt find anything that specifically suited my needs. Most of them are bloated with features I do not need, and almost none have the possibility of conditionally rendering items dynamically based on the user's info.\
 I specifically needed a dashboard that would hide/show elements based on the user's group membership, so I decided to just do it myself.
-
-```
-
-```
