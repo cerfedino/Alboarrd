@@ -1,6 +1,6 @@
 # Alboarrd
 
-Alboarrd is a fast, stateless service hub for your homelab, showing the user the services they can access.<img src="resources/dashboard.gif"/>
+Alboarrd is a fast, stateless service hub for your homelab, showing the users the services they can access.<img src="resources/dashboard.gif"/>
 
 ## How does it work ?
 
